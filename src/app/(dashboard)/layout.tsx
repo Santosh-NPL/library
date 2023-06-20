@@ -1,7 +1,7 @@
 import React from 'react'
 import NabBar from "@/app/(dashboard)/components/NabBar";
 
-const Layout = ({
+const DashboardLayout = ({
     children,
                          }:{
     children: React.ReactNode
@@ -16,4 +16,4 @@ const Layout = ({
         </>
     )
 }
-export default Layout
+export default DashboardLayout;
