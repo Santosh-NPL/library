@@ -1,8 +1,11 @@
+'use client'
 import Image from 'next/image'
 import Link from "next/link";
+import {useRouter} from "next/navigation";
 
 
 export default function Home() {
+    const router = useRouter();
   return (
       <>
         <div>
@@ -12,7 +15,7 @@ export default function Home() {
                 <Link href="/check">Check it</Link>
               </li>
                 <li>
-                    <Link href="/dashboard">Dashboard it</Link>
+                    <button onClick={()=> router.push('/dashboard')}>Dashboard</button>
                 </li>
             </ul>
           </nav>

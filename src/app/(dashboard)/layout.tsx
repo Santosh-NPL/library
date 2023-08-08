@@ -1,5 +1,6 @@
 import React from 'react'
 import NabBar from "@/app/(dashboard)/components/NabBar";
+import '../globals.css'
 
 const DashboardLayout = ({
     children,
@@ -8,10 +9,6 @@ const DashboardLayout = ({
 }) => {
     return (
         <>
-            <div className="bg-red-500 full-width h-4">
-                dashboard layout
-            </div>
-            <NabBar />
             {children}
         </>
     )

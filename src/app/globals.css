@@ -1,11 +1,31 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .sidebar-icon{
+    @apply relative flex items-center justify-center
+            h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
+            bg-gray-800  text-green-500 hover:bg-green-600 hover:text-white rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer;
+  }
+  .sidebar-tooltip{
+    @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md text-white bg-gray-900 text-xs font-bold transition-all duration-100 scale-0 origin-left;
+  }
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+  --accent-color: rgb(204, 0, 0);
+  --lightest-gray: rgb(249, 249, 249);
+  --light-gray: rgb(144,144,144);
+  --medium-gray: rgb(96, 96, 96);
+  --dark-gray: rgb(13,13,13);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +33,11 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --accent-color: rgb(204, 0, 0);
+    --lightest-gray: rgb(249, 249, 249);
+    --light-gray: rgb(144,144,144);
+    --medium-gray: rgb(96, 96, 96);
+    --dark-gray: rgb(13,13,13);
   }
 }
 
@@ -24,4 +49,16 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.v2{
+  font-family: 'Poppins', sans-serif;
+}
+
+.sidebar{
+  @apply fixed top-0 left-0 h-full w-[260px] bg-gray-200 z-50 transition-all ease-in
+}
+
+.sidebar.close{
+  @apply w-[78px]
 }
